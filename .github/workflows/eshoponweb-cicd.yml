@@ -71,11 +71,15 @@ jobs:
     - name: Check Az CLI version
       run: az --version
 
+    - name: Login
+      run: az login --service-principal -u c1b03ad4-c1ca-4bb5-b572-40e19247e3bf -p=secret --tenant2c5773f5-2add-467d-89a1-1c50bd74d6c2
+
+
   #Login in your azure subscription using a service principal (credentials stored as GitHub Secret in repo)
-    - name: Azure Login
-      uses: azure/login@v1
-      with:
-        creds: ${{ secrets.AZURE_CREDENTIALS }}
+    #- name: Azure Login
+      #uses: azure/login@v1
+      #with:
+      #  creds: ${{ secrets.AZURE_CREDENTIALS }}
            
     # Deploy Azure WebApp using Bicep file
     - name: deploy
