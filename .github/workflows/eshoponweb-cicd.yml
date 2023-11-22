@@ -68,7 +68,10 @@ jobs:
         name: bicep-template
         path: bicep-template
         
-   #Login in your azure subscription using a service principal (credentials stored as GitHub Secret in repo)
+    - name: Check Az CLI version
+      run: az --version
+
+  #Login in your azure subscription using a service principal (credentials stored as GitHub Secret in repo)
     - name: Azure Login
       uses: azure/login@v1
       with:
