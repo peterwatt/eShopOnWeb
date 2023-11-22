@@ -72,7 +72,7 @@ jobs:
       run: az --version
 
     - name: Login
-      run: az login --service-principal -u c1b03ad4-c1ca-4bb5-b572-40e19247e3bf -p=secret --tenant 2c5773f5-2add-467d-89a1-1c50bd74d6c2
+      run: az login --service-principal -u c1b03ad4-c1ca-4bb5-b572-40e19247e3bf -p='-G68Q~XkiHjJxhB4qWYz.6PTiWMfWLm41QXDFbhr' --tenant 2c5773f5-2add-467d-89a1-1c50bd74d6c2
 
 
   #Login in your azure subscription using a service principal (credentials stored as GitHub Secret in repo)
